@@ -18,5 +18,5 @@
 ---
 
 ## 👤 Autor
-📌 **Eric Guerra**
+📌 **Erick Guerra**
 
