@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #074449;
+}
+
+.ovni {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+}
+
+.antena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.antena::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(168, 62, 62);
+    border: 3px solid black;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.antena::after {
+    content: '';
+    width: 4px;
+    height: 40px;
+    background-color: black;
+    display: block;
+}
+
+.cabina {
+    position: absolute;
+    top: 60px;
+    width: 100px;
+    height: 60px;
+    background-color: #87CEFA;
+    border-radius: 50px 50px 0 0;
+    border: 4px solid black;
+}
+
+.cabina::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -2px;
+    width: 70px;
+    height: 40px;
+    border-radius: 50px 50px 0 0;
+    border: 3px solid black;
+    border-top-color: black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-50deg);
+}
+
+.cuerpo {
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 80px;
+    background-color: #B0B0B0;
+    border-radius: 50%;
+    border: 4px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cuerpo span {
+    width: 15px;
+    height: 15px;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.cuerpo span:first-child {
+    background-color: rgb(5, 56, 25);
+}
+
+.cuerpo span:nth-child(2) {
+    background-color: rgb(5, 141, 57);
+    margin-top: 25px;
+}
+
+.cuerpo span:last-child {
+    background-color: rgb(0, 255, 85);
+}
+
+.base {
+    position: absolute;
+    top: calc(100px + 60px);
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid black;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.2));
+}
+
+.cuerpo > span + span {
+    border: 2px solid black;
+}
+
+.cabina ~ .cuerpo {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.cuerpo > span:first-child {
+    transform: scale(1.1);
+}
